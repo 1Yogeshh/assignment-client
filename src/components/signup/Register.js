@@ -14,7 +14,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', formData);
+      const res = await axios.post('https://assignment-server-zeta.vercel.app/api/auth/signup', formData);
       setMessage(res.data.message);
       Navigate('/verify',{ state: { email: formData.email } })
     } catch (error) {

@@ -8,7 +8,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post('https://assignment-server-zeta.vercel.app/api/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       window.location = '/dashboard';
     } catch (err) {

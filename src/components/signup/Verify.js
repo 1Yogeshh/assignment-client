@@ -11,7 +11,7 @@ const Verify = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/verify-otp', { email, otp });
+      const response = await axios.post('https://assignment-server-zeta.vercel.app/api/auth/verify-otp', { email, otp });
       alert(response.data.message);
       navigate('/'); // Redirect to login page or dashboard after successful verification
     } catch (error) {
